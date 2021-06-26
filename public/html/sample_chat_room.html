@@ -1,0 +1,38 @@
+<!-- 简易聊天室--用于WebRTC信令服务 -->
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>简化聊天室</title>
+    
+    <style>
+        li {
+            margin-top: 10px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+        input{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><label>欢迎进入聊天室</label></li>
+            <li><input type="text" placeholder="请输入房间号" id="roomid"/><button id="connect">连接服务器</button></li>
+            <li><textarea rows="10" cols="40" id="chat_content" placeholder="聊天展示区域"></textarea></li>
+            <li><input type="text" id="msg_content" placeholder="请输入要发送的内容"/></li>
+            <li><button id="send">发送</button></li>
+        </ul>
+    </div>
+    <script src="../js/socket.io.min.js">
+    </script>
+    <script src="../js/sample_chat_room.js">
+    </script>
+</body>
+
+</html>

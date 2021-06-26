@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WebRTC获取设备信息测试</title>
+    <!-- 引入console -->
+    <script src="./js/vconsole.min.js">
+
+
+    </script>
+    //引入是为了多浏览器适配
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+
+</head>
+
+<body>
+    <div>
+        <label>audio input device:</label>
+        <select id="audioSource"></select>
+    </div>
+    <div>
+        <label>audio output device:</label>
+        <select id="audioOutput"></select>
+    </div>
+    <div>
+        <label>video input device:</label>
+        <select id="videoSource"></select>
+    </div>
+
+</body>
+<script>
+
+    // 初始化vconsole，可在网页上打印调试信息
+    var vConsole = new VConsole();
+    console.log('Hello world');
+</script>
+<script type="text/javascript" src="./js/device_info.js"></script>
+
+</html>

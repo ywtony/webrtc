@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebRTC屏幕共享</title>
+    <style>
+        .preview {
+            display: flex;
+        }
+
+        .remote {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <button id="connserver">Connect Sig Server</button>
+            <button id="leave" disabled>leave</button>
+
+        </div>
+        <div class="preview">
+            <div>
+                <h2>Local:</h2>
+                <video id="localVideo" autoplay playsinline></video>
+
+            </div>
+            <div class="remote">
+                <h2>Remote:</h2>
+                <video id="remotevideo"></video>
+
+            </div>
+        </div>
+    </div>
+    <!-- socketio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <!-- 多浏览器适配 -->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <!-- 屏幕共享的主代码 -->
+    <script src="../js/share_screen.js"></script>
+</body>
+
+</html>
